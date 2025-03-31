@@ -19,32 +19,42 @@ void mergeSortRec(vector<Comparable> &vec, int startIndex, int endIndex, vector<
     i = 0;
     leftIndex = startIndex;
     rightIndex = centerIndex + 1;
+
     // While leftIndex and rightIndex are in bounds of their half
     while (leftIndex <= centerIndex && rightIndex <= endIndex) {
+        reads += 2;
         if (vec[leftIndex] <= vec[rightIndex]) {
             temp[i] = vec[leftIndex];
+            reads++;
             ++leftIndex;
         } else {
             temp[i] = vec[rightIndex];
+            reads++;
             ++rightIndex;
         }
         ++i;
-    }
+}
     // Now one of the halves is empty and the other half has at least one element left to copy into temp
-    while (leftIndex <= centerIndex) {
+    while (leftIndex <= centerIndex){
+        reads++;
         temp[i] = vec[leftIndex];
+        reads++;
         ++leftIndex;
         ++i;
     }
     while (rightIndex <= endIndex) {
+        reads++;
         temp[i] = vec[rightIndex];
+        reads++;
         ++rightIndex;
         ++i;
     }
     // Now everything between startIndex and endIndex is copied into temp
     // Copy everything from temp back into vec
     for (i = 0; i <= endIndex-startIndex; ++i) {
+        reads++;
         vec[i + startIndex] = temp[i];
+        reads++;
     }
 
     // Uncomment this line if you want to see each iteration
@@ -55,7 +65,9 @@ template<typename Comparable>
 vector<Comparable> mergeSort(vector<Comparable> vec, unsigned long& reads, unsigned long& allocations) {
     reads = allocations = 0;
     vector<Comparable> temp(vec.size());
+    allocations += vec.size() * sizeof(Comparable);
     int i, leftIndex, rightIndex;
+    allocations += 3 * sizeof(int);
     mergeSortRec(vec, 0, vec.size() - 1, temp, i, leftIndex, rightIndex, reads, allocations);
     return vec;
 }
