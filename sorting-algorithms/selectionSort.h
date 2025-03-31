@@ -1,3 +1,8 @@
+/**
+*  Quinlin Fournier
+ * CS 2240
+ * Section A
+ */
 #ifndef SORTING_SELECTIONSORT_H
 #define SORTING_SELECTIONSORT_H
 
@@ -14,11 +19,10 @@ vector<Comparable> selectionSort(vector<Comparable> vec, unsigned long& reads, u
         // Loop through vector starting at swapIndex and keep track of min
         minIndex = swapIndex;
         for (i = swapIndex+1; i < vec.size(); ++i) {
-            reads ++;
+            reads += 2;
             if (vec[i] < vec[minIndex]) {
                 // We have a new minimum
                 minIndex = i;
-                reads++;
             }
         }
         // Swap min value into swapIndex spot in vector

@@ -1,3 +1,8 @@
+/**
+*  Quinlin Fournier
+ * CS 2240
+ * Section A
+ */
 #ifndef MERGESORT_H
 #define MERGESORT_H
 

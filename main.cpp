@@ -1,3 +1,8 @@
+/**
+*  Quinlin Fournier
+ * CS 2240
+ * Section A
+ */
 #include "sorting-algorithms/bubbleSort.h"
 #include "sorting-algorithms/heapSort.h"
 #include "sorting-algorithms/insertionSort.h"
@@ -56,7 +61,7 @@ int main() {
         cout << " ------------------- " << endl;
 
     }
-
+    // Stability testing
     stabilityTest();
     return 0;
 }

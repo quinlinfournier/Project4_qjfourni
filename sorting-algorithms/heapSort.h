@@ -1,3 +1,8 @@
+/**
+*  Quinlin Fournier
+ * CS 2240
+ * Section A
+ */
 #ifndef SORTING_HEAPSORT_H
 #define SORTING_HEAPSORT_H
 
@@ -38,6 +43,7 @@ void percolateDown(vector<Comparable> &items, int& i, unsigned long& n, int& chi
         }
     }
     items[i] = tmp;
+    reads++;
 }
 
 template <typename Comparable>
