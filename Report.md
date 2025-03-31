@@ -12,10 +12,10 @@ Answer the following prompts directly in this file:
  
   * The 8 attributes in this project are the National Database Number(ndn), Common name, Species, State(that they were sighted in), date sighted, longitude, Latitude, Length. I got the data from https://www.fisheries.noaa.gov/national/marine-life-distress/national-stranding-database-public-access?utm_source=chatgpt.com. After looking around I thought that the large whale data was interesting data also I think that sea creatures are cool. The data is in order of date collected from oldest to newest from the years of 2005-2015. In order to check to see if the function was working correctly I used the command f to find something and searched up the term I wanted to count and it matched the number that was being output by my code. I chose the number of killer whales there were in the data set so created a function that would display the answer.
  
-  * ![Bubble Sort](graphs/Bubble Sort.png)
-  * ![Heap Sort](graphs/Heap Sort.png)
-  * ![Merge Sort](graphs/Merge Sort.png)
-  * ![Selection Sort](graphs/Selection Sort.png)
+  * ![Bubble Sort](graphs/BubbleSort.png)
+  * ![Heap Sort](graphs/HeapSort.png)
+  * ![Merge Sort](graphs/MergeSort.png)
+  * ![Selection Sort](graphs/SelectionSort.png)
     
 In Bubble, Heap, and Selection Sort it is difficult to see the allocations due to the large number of reads, but all three have constant auxiliary, which is evident because the number of allocations doesn’t change with the size of the vectors. The graph that stands out is Merge sort, which is the only sorting system that doesn’t have a constant auxiliary, and it is the only one that at any point has more allocations that read at any point. Then, in bubble and selection sort you can start to see the quadratic time complexity show as the time vector size increases the number of reads by more. The merge and heap sorts’ reads still increase but not by as much each time with displays their O(NLog N) Time Complexity. Therefore, as the size of the data increases, the heap and merge will be faster than the bubble and selection. Also, Bubble heap and selection are more memory efficient. So heap sort is the fastest and most memory efficient for this data set.
 
